@@ -6,9 +6,32 @@ import random
 random_number = random.randint(1, 3)
 
 your_guess = input("Enter your guess: ")
-print(type(int((input)))
 
-if your_guess != random_number:
+if int(your_guess) != random_number:
     print(f"You guessed it wrong! I was thinking of: ", random_number)
 else:
     print("You got it right!")
+
+#TASK 3: Words combination
+#Create a program that reads an input string and then creates and prints 5 random strings from characters of the input string.
+#For example, the program obtained the word ‘hello’, so it should print 5 random strings(words) that combine characters 'h', 'e', 'l', 'l', 'o' -> 'hlelo', 'olelh', 'loleh' …
+#Tips: Use random module to get random char from string)
+
+import random
+import string
+
+input_string = "Greetings"
+string_length = len(input_string)
+
+for i in range(string_length):
+    random_letter = random.choice(list(input_string))
+    random.shuffle(random_letter)
+    print("Randomised string 1:", random_letter)
+
+print("")
+for i in range(string_length):
+    random_letter = random.choice(list(input_string))
+    random.shuffle(random_letter)
+    print("Randomised string 2:", random_letter)
+
+
