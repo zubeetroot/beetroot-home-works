@@ -15,5 +15,5 @@ def word_count(str):
             counts[word] = 1
     return counts
 
+import functools
 print( word_count('To już ten moment. Czas na otwarcie igrzysk olimpijskich'))
-
